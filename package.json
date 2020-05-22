@@ -1,0 +1,38 @@
+{
+    "name": "02-crudtareastypescript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./dist/src/index.js",
+        "ts:node": "ts-node ./src/index.ts",
+        "hbscopy": "ncp ./src/views/ ./dist/src/views/",
+        "publiccopy": "ncp ./src/public/ ./dist/src/public/",
+        "build": "tsc && npm run hbscopy && npm run publiccopy",
+        "clean": "rimraf ./dist",
+        "dev": "nodemon"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@handlebars/allow-prototype-access": "^1.0.3",
+        "concurrently": "^5.2.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^4.0.4",
+        "handlebars": "^4.7.6",
+        "mongoose": "^5.9.15",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.6",
+        "@types/express-handlebars": "^3.1.0",
+        "@types/handlebars": "^4.1.0",
+        "@types/mongoose": "^5.7.21",
+        "@types/morgan": "^1.9.0",
+        "ncp": "^2.0.0",
+        "rimraf": "^3.0.2",
+        "ts-node": "^8.10.1",
+        "typescript": "^3.9.3"
+    }
+}
